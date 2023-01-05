@@ -1,0 +1,27 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header ul {
+    width: 269px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 100px 0 0;
+}
+
+.header li {
+    font-weight: 500;
+    font-size: 24px;
+    color: #FF6060;
+}
+
+.header li:hover {
+    border-bottom: 2px solid #FF6060;
+}
+
+.img-logo {
+    margin: 40px 0 0 100px;
+}
