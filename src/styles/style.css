@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 .header {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 }
@@ -38,8 +39,8 @@
 .banner img {
   filter: brightness(80%);
   border-radius: 25px;
-  overflow: hidden;
-  margin: 0 100px;
+  max-width: 100%;
+  height: auto;
 }
 
 .banner span {
@@ -47,20 +48,52 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 48px;
+  font-size: 3em;
   color: white;
   text-align: center;
+  width: 100%;
 }
 
 .mainColorGrey {
   background-color: #F6F6F6;
-  height: auto;
-  width: auto;
-  margin: 50px 100px;
+  height: 100%;
+  width: 100%;
+  margin-top: 50px;
   border-radius: 25px;
 }
 
+.grille {
+  height: auto;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 340px);
+  justify-content: center;
+  grid-gap: 60px;
+  padding: 56px 45px;
+}
+
+.grille-item {
+  position: relative;
+}
+
+.grille-item img {
+  width: 340px;
+  height: 340px;
+  border-radius: 10px;
+}
+
+.grille-item span {
+  color: #fff;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 18px;
+  max-width: 200px;
+  z-index: 10;
+}
+
 body {
+  max-width: 1240px;
   margin: 0 auto;
 }
 

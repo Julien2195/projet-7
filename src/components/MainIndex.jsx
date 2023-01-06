@@ -1,10 +1,62 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+
 const MainIndex = () => {
+  const [data, setData] = useState([]);
+  React.useEffect(() => {
+    axios.get("/logement.json").then((res) => setData(res.data));
+  });
+
   return (
     <div className="mainColorGrey">
       <div className="grille">
-        <div className="grille-item"></div>
+        {data.map((logement) => (
+          <div key={logement.id} className="grille-item">
+            {<img src={logement.cover} alt={logement.title} />}
+            <span key={logement.id}>{logement.title} </span>
+          </div>
+        ))}
       </div>
+      {/* <div className="grille">s
+        <div className="grille-item">
+          <span>Titre de la location</span>
+        </div>
+        <div className="grille-item">
+          <span>Titre de la location</span>
+        </div>
+        <div className="grille-item">
+          <span>Titre de la location</span>
+        </div>
+        <div className="grille-item">
+          <span>Titre de la location</span>
+        </div>
+
+        <div className="grille-item">
+          <span>Titre de la location</span>
+        </div>
+        <div className="grille-item">
+          <span>Titre de la location</span>
+        </div>
+        <div className="grille-item">
+          <span>Titre de la location</span>
+        </div>
+        <div className="grille-item">
+          <span>Titre de la location</span>
+        </div>
+
+        <div className="grille-item">
+          <span>Titre de la location</span>
+        </div>
+        <div className="grille-item">
+          <span>Titre de la location</span>
+        </div>
+        <div className="grille-item">
+          <span>Titre de la location</span>
+        </div>
+        <div className="grille-item">
+          <span>Titre de la location</span>
+        </div>
+      </div> */}
     </div>
   );
 };
