@@ -4,7 +4,19 @@
     justify-content: space-between;
 }
 
-.header ul {
+.header-container {
+    display: flex;
+    max-width: 1240px;
+    margin: 0 auto;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.header-img {
+    max-width: 1024px;
+}
+
+.header-nav {
     list-style-type: none;
     display: flex;
     justify-content: space-between;
@@ -12,7 +24,7 @@
     padding: 0;
 }
 
-.header li {
+.header-nav li {
     font-weight: 500;
     font-size: 1.5em;
     color: #FF6060;
@@ -34,12 +46,15 @@
 //MEDIAS QUERIES 
 @media screen and (max-width: 600px) {
     .img-logo {
-        width: 145px;
+        max-width: 145px;
         height: 47px;
-        padding-right: 20px;
+        padding-right: 10px;
     }
-    .header li {
+    .header-nav li {
         font-size: 12px;
         text-transform: uppercase;
+    }
+    .li-space {
+        padding-left: 15px;
     }
 }

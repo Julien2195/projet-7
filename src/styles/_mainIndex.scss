@@ -1,9 +1,9 @@
 .mainColorGrey {
     background-color: #F6F6F6;
-    height: 100%;
-    width: 100%;
-    margin-top: 50px;
+    height: auto;
+    max-width: 1240px;
     border-radius: 25px;
+    margin: 0 auto;
 }
 
 .grille {
@@ -12,7 +12,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, 340px);
     justify-content: center;
-    grid-gap: 60px;
+    grid-gap: 50px;
     padding: 56px 45px;
 }
 
@@ -35,4 +35,20 @@
     font-size: 18px;
     max-width: 200px;
     z-index: 10;
+}
+
+//MEDIA QUERIES
+@media screen and (max-width: 550px) {
+    .mainColorGrey {
+        background-color: #fff;
+    }
+    .grille {
+        grid-template-columns: repeat(auto-fill, 280px);
+    }
+    .grille-item img {
+        width: 280px;
+        height: 340px;
+        border-radius: 10px;
+        object-fit: cover;
+    }
 }

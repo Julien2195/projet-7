@@ -8,14 +8,16 @@ const MainIndex = () => {
   });
 
   return (
-    <div className="mainColorGrey">
-      <div className="grille">
-        {data.map((logement) => (
-          <div key={logement.id} className="grille-item">
-            {<img src={logement.cover} alt={logement.title} />}
-            <span key={logement.id}>{logement.title} </span>
-          </div>
-        ))}
+    <div className="main-container">
+      <div className="mainColorGrey">
+        <div className="grille">
+          {data.map((logement) => (
+            <div key={logement.id} className="grille-item">
+              {<img src={logement.cover} alt={logement.title} />}
+              <span key={logement.id}>{logement.title} </span>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
