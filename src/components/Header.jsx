@@ -6,8 +6,8 @@ const Header = () => {
       <img className="img-logo" src={logo} alt="logo KASA" />
       <nav>
         <ul>
-          <li>Accueil</li>
-          <li>A Propos</li>
+          <li className="li-border">Accueil</li>
+          <li className="li-space">A Propos</li>
         </ul>
       </nav>
     </div>

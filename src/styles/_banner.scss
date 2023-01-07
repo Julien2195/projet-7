@@ -20,6 +20,18 @@
     transform: translate(-50%, -50%);
     font-size: 3em;
     color: white;
-    text-align: center;
     width: 100%;
+    text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+    .banner img {
+        height: 111px;
+    }
+    .banner span {
+        font-size: 24px;
+        width: 217px;
+        left: 33%;
+        text-align: left;
+    }
 }

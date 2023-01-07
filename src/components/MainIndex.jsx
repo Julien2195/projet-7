@@ -17,46 +17,6 @@ const MainIndex = () => {
           </div>
         ))}
       </div>
-      {/* <div className="grille">s
-        <div className="grille-item">
-          <span>Titre de la location</span>
-        </div>
-        <div className="grille-item">
-          <span>Titre de la location</span>
-        </div>
-        <div className="grille-item">
-          <span>Titre de la location</span>
-        </div>
-        <div className="grille-item">
-          <span>Titre de la location</span>
-        </div>
-
-        <div className="grille-item">
-          <span>Titre de la location</span>
-        </div>
-        <div className="grille-item">
-          <span>Titre de la location</span>
-        </div>
-        <div className="grille-item">
-          <span>Titre de la location</span>
-        </div>
-        <div className="grille-item">
-          <span>Titre de la location</span>
-        </div>
-
-        <div className="grille-item">
-          <span>Titre de la location</span>
-        </div>
-        <div className="grille-item">
-          <span>Titre de la location</span>
-        </div>
-        <div className="grille-item">
-          <span>Titre de la location</span>
-        </div>
-        <div className="grille-item">
-          <span>Titre de la location</span>
-        </div>
-      </div> */}
     </div>
   );
 };
