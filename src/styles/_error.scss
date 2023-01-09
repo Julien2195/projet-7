@@ -1,0 +1,40 @@
+.error {
+    font-size: 288px;
+    color: #FF6060;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.error-container span {
+    color: #FF6060;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    font-size: 36px;
+}
+
+.error-container p {
+    color: #FF6060;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+    margin-top: 170px;
+    text-decoration-line: underline;
+    cursor: pointer;
+}
+
+//MEDIA QUERIES 
+@media screen and (max-width: 700px) {
+    .error {
+        font-size: 96px;
+    }
+    .error-container span {
+        font-size: 18px;
+        width: 260px;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
