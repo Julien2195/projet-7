@@ -3,9 +3,14 @@ import logo from "../assets/logo.png";
 import { Navigate } from "react-router-dom";
 const Header = () => {
   const [goHome, setGoHome] = useState(false);
-  if (goHome == true) {
+  const [goAbout, setGoAbout] = useState(false);
+  if (goHome) {
     return <Navigate to="/" />;
   }
+  if (goAbout) {
+    return <Navigate to="/about" />;
+  }
+
   return (
     <div className="header-container">
       <div className="header-img">
@@ -21,7 +26,14 @@ const Header = () => {
           >
             Accueil
           </li>
-          <li className="li-space">A Propos</li>
+          <li
+            onClick={() => {
+              setGoAbout(true);
+            }}
+            className="li-space"
+          >
+            A Propos
+          </li>
         </ul>
       </nav>
     </div>

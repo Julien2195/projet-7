@@ -30,6 +30,7 @@
   font-size: 1.5em;
   color: #FF6060;
   white-space: nowrap;
+  cursor: pointer;
 }
 
 .li-border {
@@ -65,8 +66,8 @@
 }
 
 .banner img {
-  filter: brightness(80%);
-  border-radius: 10px;
+  filter: brightness(0.7);
+  border-radius: 25px;
   max-width: 100%;
   height: auto;
   -o-object-fit: cover;
@@ -104,7 +105,6 @@
 
 .grille {
   height: auto;
-  margin: 30px auto;
   display: grid;
   grid-template-columns: repeat(auto-fill, 340px);
   justify-content: center;
@@ -158,6 +158,7 @@
   width: 100%;
   height: 180px;
   padding-top: 30px;
+  margin-top: 30px;
 }
 
 .footer p {
@@ -166,6 +167,155 @@
   margin-top: 40px;
 }
 
+.error {
+  font-size: 288px;
+  color: #FF6060;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.error-container span {
+  color: #FF6060;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  font-size: 36px;
+}
+
+.error-container p {
+  color: #FF6060;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  font-weight: 500;
+  margin-top: 170px;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 700px) {
+  .error {
+    font-size: 96px;
+  }
+  .error-container span {
+    font-size: 18px;
+    width: 260px;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+.banniere-about {
+  filter: brightness(0.7);
+  border-radius: 25px;
+  width: 86%;
+  max-width: 1240px;
+  height: 223px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+.banniere-about-container {
+  margin: 50px 20px 30px 20px;
+}
+
+.collapse-about-container {
+  max-width: 1020px;
+  margin: 0 auto;
+}
+
+.collapse-infos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FF6060;
+  max-width: 1230px;
+  height: auto;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 31px auto 0 auto;
+}
+
+.collapse-infos img {
+  width: 23px;
+  height: 14px;
+  cursor: pointer;
+}
+
+.vector-rotate-open {
+  -webkit-animation: vectorRotate 0.5s alternate forwards;
+          animation: vectorRotate 0.5s alternate forwards;
+}
+
+.vector-rotate-reverse {
+  -webkit-animation: vectorRotateReverse 0.5s alternate forwards;
+          animation: vectorRotateReverse 0.5s alternate forwards;
+}
+
+.collapse-infos h3 {
+  margin: 0;
+  color: #fff;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.collapse-description {
+  background-color: #F6F6F6;
+  color: #FF6060;
+  height: auto;
+  font-size: 24px;
+  font-weight: 400;
+  padding: 5px 0 19px 18px;
+  border-radius: 0 0 5px 5px;
+}
+
+.collapse-about-margin {
+  margin: 0 20px;
+}
+
+@-webkit-keyframes vectorRotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes vectorRotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+@-webkit-keyframes vectorRotateReverse {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(0);
+  }
+}
+@keyframes vectorRotateReverse {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(0);
+  }
+}
+@media screen and (max-width: 600px) {
+  .banniere-about {
+    -o-object-position: 80% 40%;
+       object-position: 80% 40%;
+  }
+}
 body {
   margin: 0;
 }
