@@ -1,16 +1,7 @@
 import React, { useState } from "react";
 import logo from "../assets/logo.png";
-import { Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 const Header = () => {
-  const [goHome, setGoHome] = useState(false);
-  const [goAbout, setGoAbout] = useState(false);
-  if (goHome) {
-    return <Navigate to="/" />;
-  }
-  if (goAbout) {
-    return <Navigate to="/about" />;
-  }
-
   return (
     <div className="header-container">
       <div className="header-img">
@@ -18,22 +9,12 @@ const Header = () => {
       </div>
       <nav>
         <ul className="header-nav">
-          <li
-            onClick={() => {
-              setGoHome(true);
-            }}
-            className="li-border"
-          >
-            Accueil
-          </li>
-          <li
-            onClick={() => {
-              setGoAbout(true);
-            }}
-            className="li-space"
-          >
-            A Propos
-          </li>
+          <Link to="/" className="li li-border">
+            <h2>Accueil</h2>
+          </Link>
+          <Link to="/about" className="li li-space">
+            <h2>A Propos</h2>
+          </Link>
         </ul>
       </nav>
     </div>

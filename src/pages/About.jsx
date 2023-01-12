@@ -1,20 +1,18 @@
 import React, { useState } from "react";
-import axios from "axios";
-import Footer from "./Footer";
-import Header from "./Header";
-import banniere from "../assets/banniere-about.png";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+import banniere from "../assets/banniere-about.jpg";
 import vector from "../assets/vector.png";
 
 const About = () => {
-  const [openCollapse, setOpencollapse] = useState(null);
-
-  const toggle = (i) => {
-    if (openCollapse === i) {
-      return setOpencollapse(null);
+  const [active, setActive] = useState(false);
+  const handleToggle = (i) => {
+    if (active === i) {
+      setActive(!active);
+    } else {
+      setActive(i);
     }
-    setOpencollapse(i);
   };
-
   const questions = [
     {
       id: 1,
@@ -54,32 +52,33 @@ const About = () => {
         />
       </div>
       <div className="collapse-about-margin">
-        <div className="collapse-about-container">
-          {questions.map((question) => (
-            <div key={question.id} className="collapse-about">
-              <div className=" collapse-infos">
+        {questions.map((question) => (
+          <div
+            key={question.id}
+            className={`collapse-about-container ${
+              active === question.id ? "active" : "closed"
+            }`}
+          >
+            <div className="collapse-about">
+              <div
+                className=" collapse-infos"
+                onClick={() => handleToggle(question.id)}
+              >
                 <h3>{question.title}</h3>
                 <img
-                  className={
-                    openCollapse === question.id
-                      ? "vector-rotate-open"
-                      : "vector-rotate-reverse"
-                  }
-                  onClick={() => {
-                    toggle(question.id);
-                  }}
+                  className={"collapse-container"}
                   src={vector}
                   alt="vector"
                 />
               </div>
-              {openCollapse === question.id ? (
+              {active === question.id ? (
                 <div className="collapse-description">
                   <p>{question.description}</p>
                 </div>
               ) : null}
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
       <Footer />
     </div>

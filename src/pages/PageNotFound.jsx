@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Header from "./Header";
+import Header from "../components/Header";
 import { Navigate, useLocation } from "react-router-dom";
 const Error = () => {
   const [goHome, setGoHome] = useState(false);

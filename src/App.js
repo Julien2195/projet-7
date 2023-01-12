@@ -1,16 +1,16 @@
 import React from "react";
-import Home from "./components/Home";
-import Error from "./components/PageNotFound";
+import Home from "./pages/Home";
+import Error from "./pages/PageNotFound";
 import { Routes, Route } from "react-router-dom";
-import About from "./components/About";
+import About from "./pages/About";
 const App = () => {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="*" element={<Error />} />
-      </Routes>
+        <Route path="/" element={<Home />} />{" "}
+        <Route path="/about" element={<About />} />{" "}
+        <Route path="*" element={<Error />} />{" "}
+      </Routes>{" "}
     </div>
   );
 };

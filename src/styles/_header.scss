@@ -24,16 +24,17 @@
     padding: 0;
 }
 
-.header-nav li {
+h2 {
     font-weight: 500;
     font-size: 1.5em;
     color: #FF6060;
     white-space: nowrap;
-    cursor: pointer;
+    margin: 0;
 }
 
 .li-border {
     border-bottom: 1px solid #FF6060;
+    padding: 0;
 }
 
 .li-space {
@@ -51,11 +52,18 @@
         height: 47px;
         padding-right: 10px;
     }
-    .header-nav li {
+    h2 {
         font-size: 12px;
         text-transform: uppercase;
     }
     .li-space {
         padding-left: 15px;
+    }
+}
+
+@media screen and (max-width: 319px) {
+    .header-container {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }

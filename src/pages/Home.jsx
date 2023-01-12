@@ -1,8 +1,8 @@
 import React from "react";
-import Banner from "./Banner";
-import Footer from "./Footer";
-import Header from "./Header";
-import MainIndex from "./MainIndex";
+import Banner from "../components/Banner";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+import MainIndex from "../components/MainIndex";
 const Home = () => {
   return (
     <div>
