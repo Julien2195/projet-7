@@ -1,0 +1,35 @@
+.slidesShow-image {
+    width: 1245px;
+    height: 415px;
+    object-fit: cover;
+    position: relative;
+    margin: 20px auto;
+    border-radius: 25px;
+}
+
+.vector-left {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 30px;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.vector-right {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    right: -20px;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.number {
+    color: #fff;
+    font-weight: 500;
+    font-size: 18px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+}

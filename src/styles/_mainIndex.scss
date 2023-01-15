@@ -19,6 +19,10 @@
     position: relative;
 }
 
+.grille-item img:hover {
+    filter: brightness(0.8);
+}
+
 .grille-item img {
     width: 340px;
     height: 340px;

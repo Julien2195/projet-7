@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-
+import { Link } from "react-router-dom";
 const MainIndex = () => {
   const [logements, setLogements] = useState([]);
   useEffect(() => {
-    fetch("/logement.json")
+    fetch("/logements.json")
       .then((response) => response.json())
       .then((data) => {
         setLogements(data);
@@ -15,7 +15,9 @@ const MainIndex = () => {
         <div className="grille">
           {logements.map((logement) => (
             <div key={logement.id} className="grille-item">
-              {<img src={logement.cover} alt={logement.title} />}
+              <Link to={`/logements/${logement.id}`}>
+                <img src={logement.cover} alt={logement.title} />
+              </Link>
               <span key={logement.id}>{logement.title} </span>
             </div>
           ))}

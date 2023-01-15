@@ -5,13 +5,16 @@ import banniere from "../assets/banniere-about.jpg";
 import vector from "../assets/vector.png";
 
 const About = () => {
-  const [active, setActive] = useState(false);
+  const [active, setActive] = useState([]);
   const handleToggle = (i) => {
-    if (active === i) {
-      setActive(!active);
+    let copy = [...active];
+    if (copy.includes(i)) {
+      copy = copy.filter((x) => x != i);
     } else {
-      setActive(i);
+      copy.push(i);
     }
+
+    setActive(copy);
   };
   const questions = [
     {
@@ -56,7 +59,7 @@ const About = () => {
           <div
             key={question.id}
             className={`collapse-about-container ${
-              active === question.id ? "active" : "closed"
+              active.includes(question.id) ? "active" : "closed"
             }`}
           >
             <div className="collapse-about">
@@ -71,7 +74,7 @@ const About = () => {
                   alt="vector"
                 />
               </div>
-              {active === question.id ? (
+              {active.includes(question.id) ? (
                 <div className="collapse-description">
                   <p>{question.description}</p>
                 </div>
