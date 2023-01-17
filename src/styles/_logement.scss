@@ -1,16 +1,25 @@
-.slidesShow-image {
-    width: 1245px;
-    height: 415px;
+.logement-container {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.slidesShow-image-container {
     object-fit: cover;
     position: relative;
     margin: 20px auto 15px;
+}
+
+.slidesShow-image {
+    width: 100%;
+    height: 415px;
     border-radius: 25px;
+    object-fit: cover;
 }
 
 .vector-left {
     position: absolute;
     z-index: 10;
-    top: 50%;
+    top: 208px;
     left: 30px;
     transform: translate(-50%, -50%);
     cursor: pointer;
@@ -19,7 +28,7 @@
 .vector-right {
     position: absolute;
     z-index: 10;
-    top: 50%;
+    top: 208px;
     right: -20px;
     transform: translate(-50%, -50%);
     cursor: pointer;
@@ -31,7 +40,7 @@
     font-size: 18px;
     position: absolute;
     left: 50%;
-    bottom: 0;
+    top: 370px;
 }
 
 .infos-logement {
@@ -45,9 +54,10 @@
     margin-top: 0px;
 }
 
-.host-container {
+.host {
     display: flex;
     align-items: center;
+    margin-bottom: 15px;
 }
 
 .logement-name {
@@ -63,7 +73,7 @@
     color: #FF6060;
     font-size: 18px;
     font-weight: 500;
-    margin: 0 0 18px 0;
+    margin: 0 0 20px 0;
 }
 
 .logement-picture-host {
@@ -85,4 +95,85 @@
     font-size: 14px;
     padding: 5px 10px;
     font-weight: 500;
+}
+
+.logement {
+    width: 582px;
+    margin: 0;
+    margin-right: 20px;
+}
+
+.logement h3 {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 5px 0;
+}
+
+.logement p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    padding: 0 10px 0 20px;
+}
+
+.logement li {
+    line-height: 30px;
+    font-weight: 400;
+}
+
+.logement-collapse-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 1300px) {
+    .logement-container {
+        padding: 0 20px;
+    }
+    .logement {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .container h2 {
+        font-size: 18px;
+        flex-wrap: wrap;
+        white-space: normal;
+    }
+    .logement-collapse-container {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .logement {
+        justify-content: center;
+    }
+    .container {
+        flex-direction: column;
+    }
+    .host-container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .host-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .host {
+        padding-bottom: 20px;
+    }
 }
