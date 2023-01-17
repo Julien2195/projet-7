@@ -2,6 +2,11 @@ import React, { useState } from "react";
 import logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
 const Header = () => {
+  // const [underline, setUnderline] = useState(null);
+
+  const handleUnderline = () => {
+    setUnderline(!underline);
+  };
   return (
     <div className="header-container">
       <div className="header-img">
