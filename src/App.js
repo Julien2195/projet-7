@@ -3,8 +3,8 @@ import Home from "./pages/Home";
 import Error from "./pages/PageNotFound";
 import Logement from "./pages/Logement";
 import { Routes, Route } from "react-router-dom";
-
 import About from "./pages/About";
+
 const App = () => {
   return (
     <div>

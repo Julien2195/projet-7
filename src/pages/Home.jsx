@@ -6,10 +6,10 @@ import MainIndex from "../components/MainIndex";
 const Home = () => {
   return (
     <div>
-      <Header />
+      <Header showBorder={true} />
       <Banner />
       <MainIndex />
-      <Footer />
+      <Footer marginTop={50} />
     </div>
   );
 };

@@ -33,7 +33,7 @@ const questions = [
 const About = () => {
   return (
     <div>
-      <Header />
+      <Header showBorder2={true} />
 
       <div className="banniere-about-container">
         <img
@@ -47,7 +47,7 @@ const About = () => {
           <Collapse key={question.id} question={question} />
         ))}
       </div>
-      <Footer />
+      <Footer marginTop={282} />
     </div>
   );
 };

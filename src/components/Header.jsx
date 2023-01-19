@@ -1,12 +1,7 @@
 import React, { useState } from "react";
 import logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
-const Header = () => {
-  // const [underline, setUnderline] = useState(null);
-
-  const handleUnderline = () => {
-    setUnderline(!underline);
-  };
+const Header = (props) => {
   return (
     <div className="header-container">
       <div className="header-img">
@@ -17,10 +12,22 @@ const Header = () => {
       <nav>
         <ul className="header-nav">
           <Link to="/" className="li li-border">
-            <h2>Accueil</h2>
+            <h2
+              style={
+                props.showBorder ? { borderBottom: "2px solid #FF6060" } : null
+              }
+            >
+              Accueil
+            </h2>
           </Link>
           <Link to="/about" className="li li-space">
-            <h2>A Propos</h2>
+            <h2
+              style={
+                props.showBorder2 ? { borderBottom: "2px solid #FF6060" } : null
+              }
+            >
+              A Propos
+            </h2>
           </Link>
         </ul>
       </nav>

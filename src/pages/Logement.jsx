@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import vectorLeft from "../assets/vector-left.png";
 import vectorRight from "../assets/vector-right.png";
 import filledStars from "../assets/rating.svg";
@@ -12,13 +12,23 @@ const Logement = () => {
   let params = useParams();
   const [logement, setLogement] = useState(null);
   const [showImg, setShowImg] = useState(0);
+  const [redirect, setRedirect] = useState(false);
   useEffect(() => {
     fetch(`/logements.json`)
       .then((response) => response.json())
       .then((data) => {
-        setLogement(data.find((logement) => logement.id === params.id));
+        setLogement(data);
+        const found = data.find((logement) => logement.id === params.id);
+        if (found) {
+          setLogement(found);
+        } else {
+          setRedirect(true);
+        }
       });
   }, []);
+  if (redirect) {
+    return <Navigate to="*" />;
+  }
   const handleNext = () => {
     setShowImg(showImg === logement.pictures.length - 1 ? 0 : showImg + 1);
   };
@@ -130,7 +140,7 @@ const Logement = () => {
           </div>
         )}
       </div>
-      <Footer />
+      <Footer marginTop={224} />
     </div>
   );
 };
