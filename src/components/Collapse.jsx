@@ -2,46 +2,39 @@ import React from "react";
 import { useState } from "react";
 import vector from "../assets/vector.png";
 
+// const Collapse = ({ question }) => {
+//   const [active, setActive] = useState([]);
+//   const handleToggle = (i) => {
+//     let copy = [...active];
+//     if (copy.includes(i)) {
+//       copy = copy.filter((x) => x != i);
+//     } else {
+//       copy.push(i);
+//     }
+//     setActive(copy);
+//   };
+
 const Collapse = ({ question }) => {
-  const [active, setActive] = useState([]);
-  const handleToggle = (i) => {
-    let copy = [...active];
-    if (copy.includes(i)) {
-      copy = copy.filter((x) => x != i);
-    } else {
-      copy.push(i);
-    }
-    setActive(copy);
-  };
+  const [isActive, setIsActive] = useState(false);
 
   return (
     <div>
-      {question && (
-        <div
-          key={question.id}
-          className={`collapse-about-container ${
-            active.includes(question.id) ? "active" : "closed"
-          }`}
-        >
-          <div className="collapse-about">
-            <div
-              className=" collapse-infos"
-              onClick={() => handleToggle(question.id)}
-            >
-              <h3>{question.title}</h3>
-              <img className={"collapse-container"} src={vector} alt="vector" />
-            </div>
-          </div>
-
-          {active.includes(question.id) ? (
-            <div className="collapse-description">
-              <p>{question.description}</p>
-            </div>
-          ) : null}
+      <div className="collapse-about">
+        <div className=" collapse-infos" onClick={() => setIsActive(!isActive)}>
+          <h3>{question.title}</h3>
+          {isActive ? (
+            <img src={vector} alt="" className="active2" />
+          ) : (
+            <img src={vector} alt="" className="active3" />
+          )}
         </div>
-      )}
+        {isActive ? (
+          <div className="collapse-description">{question.description}</div>
+        ) : (
+          ""
+        )}
+      </div>
     </div>
   );
 };
-
 export default Collapse;

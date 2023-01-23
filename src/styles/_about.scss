@@ -67,12 +67,24 @@
         height: auto;
         font-size: 24px;
         font-weight: 400;
-        padding: 5px 10px 1px 10px;
+        padding: 15px 10px 30px 10px;
         border-radius: 0 0 5px 5px;
+        margin: 0 auto;
+        max-width: 1230px;
     }
     
     .collapse-about-margin {
         margin: 0 20px;
+    }
+    
+    .active2 {
+        transform: rotate(180deg);
+        transition: 0.5s;
+    }
+    
+    .active3 {
+        transform: rotate(0);
+        transition: 0.5s;
     }
     
     @media screen and (max-width: 600px) {
