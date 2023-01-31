@@ -2,18 +2,6 @@ import React from "react";
 import { useState } from "react";
 import vector from "../assets/vector.png";
 
-// const Collapse = ({ question }) => {
-//   const [active, setActive] = useState([]);
-//   const handleToggle = (i) => {
-//     let copy = [...active];
-//     if (copy.includes(i)) {
-//       copy = copy.filter((x) => x != i);
-//     } else {
-//       copy.push(i);
-//     }
-//     setActive(copy);
-//   };
-
 const Collapse = ({ question }) => {
   const [isActive, setIsActive] = useState(false);
 
@@ -23,9 +11,9 @@ const Collapse = ({ question }) => {
         <div className=" collapse-infos" onClick={() => setIsActive(!isActive)}>
           <h3>{question.title}</h3>
           {isActive ? (
-            <img src={vector} alt="" className="active2" />
+            <img src={vector} alt="vector" className="active" />
           ) : (
-            <img src={vector} alt="" className="active3" />
+            <img src={vector} alt="vector" className="closed" />
           )}
         </div>
         {isActive ? (

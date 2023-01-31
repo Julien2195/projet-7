@@ -1,8 +1,0 @@
-Problème à régler projet 7:
-GENRALE:
- RESOLU - Gérer les erreurs de boucle infini 
-
-A PROPOS:
-RESOLU- animation qui se lance au chargement de la page
-- description qui se ferme quand une autre est ouverte
-RESOLU- image d'en tête a changer au retrecissement de la page 

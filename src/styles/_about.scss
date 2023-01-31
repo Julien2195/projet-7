@@ -77,12 +77,12 @@
         margin: 0 20px;
     }
     
-    .active2 {
+    .active {
         transform: rotate(180deg);
         transition: 0.5s;
     }
     
-    .active3 {
+    .closed {
         transform: rotate(0);
         transition: 0.5s;
     }

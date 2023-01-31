@@ -2,16 +2,14 @@ import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { useParams, Navigate } from "react-router-dom";
-import vectorLeft from "../assets/vector-left.png";
-import vectorRight from "../assets/vector-right.png";
 import filledStars from "../assets/rating.svg";
 import emptyStars from "../assets/rating-empty.svg";
 import Collapse from "../components/Collapse";
+import Gallery from "../components/Gallery";
 
 const Logement = () => {
   let params = useParams();
   const [logement, setLogement] = useState(null);
-  const [showImg, setShowImg] = useState(0);
   const [redirect, setRedirect] = useState(false);
   useEffect(() => {
     fetch(`/logements.json`)
@@ -29,13 +27,6 @@ const Logement = () => {
   if (redirect) {
     return <Navigate to="*" />;
   }
-  const handleNext = () => {
-    setShowImg(showImg === logement.pictures.length - 1 ? 0 : showImg + 1);
-  };
-
-  const handlePrevious = () => {
-    setShowImg(showImg === 0 ? logement.pictures.length - 1 : showImg - 1);
-  };
 
   return (
     <div>
@@ -44,26 +35,7 @@ const Logement = () => {
       <div className="logement-container">
         {logement && (
           <div className="slidesShow-image-container">
-            <img
-              onClick={handlePrevious}
-              className="vector-left"
-              src={vectorLeft}
-              alt="fleche gauche"
-            />
-            <img
-              onClick={handleNext}
-              className="vector-right"
-              src={vectorRight}
-              alt="fleche droite"
-            />
-            <img
-              className="slidesShow-image"
-              src={logement.pictures[showImg]}
-              alt={logement.title}
-            />
-            <span className="number">{`${showImg + 1}/${
-              logement.pictures.length
-            }`}</span>
+            <Gallery logement={logement} />
             <div className="container">
               <div>
                 <h2 className="logement-title">{logement.title}</h2>
