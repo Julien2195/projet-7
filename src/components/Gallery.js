@@ -15,13 +15,18 @@ const Gallery = ({ logement }) => {
     <div>
       <img
         onClick={handlePrevious}
-        className="vector-left"
+        className={
+          logement.pictures.length > 1 ? "vector-left" : "vector-left-off"
+        }
         src={vectorLeft}
         alt="fleche gauche"
       />
+
       <img
         onClick={handleNext}
-        className="vector-right"
+        className={
+          logement.pictures.length > 1 ? "vector-right" : "vector-right-off"
+        }
         src={vectorRight}
         alt="fleche droite"
       />

@@ -14,9 +14,11 @@
     height: 415px;
     border-radius: 25px;
     object-fit: cover;
+    display: block
 }
 
 .vector-left {
+    display: block;
     position: absolute;
     z-index: 10;
     top: 208px;
@@ -26,12 +28,21 @@
 }
 
 .vector-right {
+    display: block;
     position: absolute;
     z-index: 10;
     top: 208px;
     right: -20px;
     transform: translate(-50%, -50%);
     cursor: pointer;
+}
+
+.vector-left-off {
+    display: none;
+}
+
+.vector-right-off {
+    display: none;
 }
 
 .number {
